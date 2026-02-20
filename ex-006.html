@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+    body{ background-color: blueviolet;
+    color: white;
+    font: normal 18pt Arial;
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Aprendendo a utilizar o DOM</h1>
+    </header>
+    <main>
+        <p>aqui vai o resultado</p>
+        <p>aprendendo a usar <strong>dom</strong> em javascript</p>
+        <div id="msg">clique em min</div>
+    </main>
+</body>
+<script>
+    var p1 = window.document.getElementsByTagName('p')[1]
+    var d1 = window.document.getElementById('msg')
+    var corpo = window.document.body
+            p1.style.color = 'Blue'
+            corpo.style.backgroundColor = 'Black'
+            d1.style.backgroundColor = 'lightgray'
+            d1.style.height = '100px'
+            d1.style.border = '5px dotted white'
+            d1.style.boxShadow = '0px 0px 10px gray'
+            d1.style.borderRadius = '10px'
+        d1.innerText = 'Estou aguardando...'
+        window.alert(p1.innerText)
+        // querySelector( aqui é como se fosse no CSS é mais recente e mais recomendado!!!)
+</script>
+</html>
