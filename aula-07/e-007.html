@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Avançando em DOM</title>
+    <style>
+        div#area{
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            font: normal 20pt Arial;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" style="cursor: pointer; box-shadow: inset 0px 0px 10px white;" >
+            Interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', Click )
+        a.addEventListener('mouseenter', Entrar)
+        a.addEventListener('mouseleave', Sair)
+        function Click(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'clicou'
+            a.style.backgroundColor = 'Black'
+            a.style.boxShadow = 'inset 0px 0px 10px White'
+            a.style.transition = 'all .5s'
+        }
+        function Entrar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'entro'
+            a.style.backgroundColor = 'Blue'
+            a.style.boxShadow = 'inset 0px 0px 10px black'
+            a.style.transition = 'all .5s'
+        }
+         function Sair(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'saiu'
+            a.style.backgroundColor = 'Green'
+            a.style.boxShadow = 'inset 0px 0px 10px White'
+            a.style.transition = 'all .5s'
+        }
+    </script>
+</body>
+</html>
